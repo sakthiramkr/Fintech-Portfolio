@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakthi Ramkumar — Senior Product Marketer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0f0f0f;
+    --ink: #1c1c1e;
+    --mid: #3a3a3c;
+    --muted: #636366;
+    --faint: #aeaeb2;
+    --rule: #e5e5ea;
+    --surface: #f5f5f7;
+    --white: #ffffff;
+    --accent: #0066ff;
+    --accent-dim: #e8f0fe;
+    --accent-text: #003db3;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --max: 760px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+  .nav-brand {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--black);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--black); }
+
+  /* SECTIONS */
+  section {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+  section + section {
+    padding-top: 0;
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 6vw, 3.8rem);
+    font-weight: 400;
+    line-height: 1.08;
+    color: var(--black);
+    margin-bottom: 1.75rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--muted);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--mid);
+    max-width: 580px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+  .fintech-note {
+    display: inline-block;
+    background: var(--accent-dim);
+    color: var(--accent-text);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .hero-cta:hover { opacity: 0.82; }
+
+  /* METRICS STRIP */
+  .metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+  .metric-cell {
+    background: var(--white);
+    padding: 1.25rem 1.5rem;
+  }
+  .metric-val {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .metric-label {
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.02em;
+  }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* CASE STUDIES */
+  .case-study {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+  }
+  .case-study:last-child { border-bottom: none; }
+  .cs-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .cs-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+    background: var(--accent-dim);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+  }
+  .cs-year {
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .cs-headline {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .cs-summary {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  .cs-outcomes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .cs-outcome-pill {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--mid);
+    background: var(--surface);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+  }
+  .cs-toggle {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  .cs-toggle::after {
+    content: '↓';
+    transition: transform 0.2s;
+    display: inline-block;
+  }
+  .cs-toggle.open::after { transform: rotate(180deg); }
+
+  /* EXPANDED CASE STUDY */
+  .cs-detail {
+    display: none;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .cs-detail.visible { display: block; }
+  .cs-detail p {
+    font-size: 14.5px;
+    color: var(--mid);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .cs-stat-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1.75rem 0;
+  }
+  .cs-stat {
+    background: var(--white);
+    padding: 1rem 1.25rem;
+  }
+  .cs-stat-key {
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .cs-stat-val {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .transfer-note {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1.5rem;
+  }
+  .transfer-note p {
+    font-size: 13.5px;
+    color: var(--mid);
+    margin: 0;
+    font-style: italic;
+  }
+  .transfer-note strong {
+    font-style: normal;
+    color: var(--accent-text);
+    font-weight: 600;
+  }
+
+  /* TABLE */
+  .cs-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 1.25rem 0;
+  }
+  .cs-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .cs-table td {
+    padding: 0.6rem 0.75rem;
+    color: var(--mid);
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .cs-table tr:last-child td { border-bottom: none; }
+  .cs-table td:first-child { color: var(--ink); font-weight: 500; }
+
+  /* WORK SAMPLES */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .work-card {
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: var(--white);
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .work-card:hover { border-color: var(--accent); }
+  .work-card-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 0.6rem;
+  }
+  .work-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  .work-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .work-card-detail {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .work-card-detail.visible { display: block; }
+  .work-stat {
+    display: inline-block;
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-right: 0.25rem;
+  }
+  .work-stat-label {
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .ab-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+  .ab-col {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 0.85rem;
+  }
+  .ab-col.winner { background: var(--accent-dim); }
+  .ab-col-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+  .ab-col.winner .ab-col-label { color: var(--accent-text); }
+  .ab-col-val {
+    font-size: 1.3rem;
+    font-family: var(--serif);
+    color: var(--black);
+  }
+  .ab-col-desc {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+
+  /* N8N / BEYOND THE DECK */
+  .beyond-card {
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .beyond-header {
+    background: var(--surface);
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .beyond-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .beyond-icon svg { width: 20px; height: 20px; fill: var(--white); }
+  .beyond-header-text h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+  .beyond-header-text p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .beyond-body {
+    padding: 1.5rem;
+  }
+  .beyond-body p {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .workflow-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .workflow-pill {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--mid);
+    background: var(--surface);
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    border: 1px solid var(--rule);
+  }
+  .beyond-insight {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+  .beyond-insight p {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    font-style: italic;
+  }
+
+  /* EXPERIENCE */
+  .exp-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.6rem;
+  }
+  .exp-co { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .exp-role { font-size: 14px; color: var(--muted); margin-bottom: 0.3rem; }
+  .exp-dates { font-size: 12px; color: var(--faint); white-space: nowrap; }
+  .exp-body {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.7;
+    max-width: 560px;
+  }
+  .exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+  .exp-tag {
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--surface);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .skill-group {
+    padding: 1.25rem;
+    background: var(--surface);
+    border-radius: 10px;
+  }
+  .skill-group-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 0.75rem;
+  }
+  .skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .skill-item {
+    font-size: 12.5px;
+    color: var(--mid);
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--faint);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1rem; }
+    section { padding: 3rem 1rem; }
+    .hero { padding-top: 4rem; }
+    .metrics-strip { grid-template-columns: repeat(2, 1fr); }
+    .work-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .ab-compare { grid-template-columns: 1fr; }
+    .cs-stat-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-brand">Sakthi Ramkumar · PMM</a>
+  <ul class="nav-links">
+    <li><a href="#case-studies">Case Studies</a></li>
+    <li><a href="#work">Work Samples</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-eyebrow">Senior Product Marketer · B2B SaaS &amp; Fintech · GTM &amp; Global Scaling</div>
+  <h1>Product marketing<br>built from <em>evidence.</em></h1>
+  <p class="hero-sub">
+    5+ years as Founding PMM for TrainerCentral (Zoho Corp.) — building GTM from zero across India, the U.S., and Singapore. I own value proposition development, competitive intelligence, channel strategy, PR, and pricing — and hold every decision accountable to adoption, funnel, and revenue metrics.
+  </p>
+  <div class="fintech-note">
+    ✦ Comfortable in the fintech &amp; payments ecosystem — familiar with how businesses evaluate payment solutions on cost, settlement speed, integration complexity, and reliability vs. providers like Stripe, Adyen, and SumUp.
+  </div>
+  <br><br>
+  <a href="#case-studies" class="hero-cta">View Case Studies →</a>
+</section>
+
+<!-- METRICS -->
+<section style="padding-top: 0; padding-bottom: 4rem;">
+  <div class="metrics-strip">
+    <div class="metric-cell">
+      <div class="metric-val">0→1</div>
+      <div class="metric-label">GTM Launch</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-val">1,000+</div>
+      <div class="metric-label">Signups · Year 1</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-val">18%</div>
+      <div class="metric-label">Revenue Lift · Pricing</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-val">45%</div>
+      <div class="metric-label">MQL→SQL Lift</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-val">11→5%</div>
+      <div class="metric-label">Paid Churn Reduction</div>
+    </div>
+    <div class="metric-cell">
+      <div class="metric-val">43%</div>
+      <div class="metric-label">Inbound Traffic via Content</div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="section-label">Case Studies</div>
+
+  <!-- CS 1: SCORM / Customer Signals -->
+  <div class="case-study">
+    <div class="cs-meta">
+      <span class="cs-tag">Product Influence · VoC</span>
+      <span class="cs-year">2023</span>
+    </div>
+    <div class="cs-headline">From Customer Signals to Roadmap Prioritisation</div>
+    <p class="cs-summary">How aggregating signals across four data sources surfaced a product gap, built a business case, and moved a feature from backlog to beta in one quarter.</p>
+    <div class="cs-outcomes">
+      <span class="cs-outcome-pill">4-Source Signal Aggregation</span>
+      <span class="cs-outcome-pill">Business Case Development</span>
+      <span class="cs-outcome-pill">Roadmap Influence</span>
+      <span class="cs-outcome-pill">Enterprise Deal Recovery</span>
+    </div>
+    <button class="cs-toggle" onclick="toggleCS(this)">Read case study</button>
+    <div class="cs-detail">
+      <p>TrainerCentral's pipeline was growing but late-stage enterprise deals kept stalling — and no one had a systematic view of why. I built a signal aggregation engine pulling from four sources simultaneously: G2 and Capterra review patterns, Reddit community discussions, support ticket themes, and CRM lost-deal notes.</p>
+      <p>A clear pattern emerged. Enterprise buyers were consistently flagging SCORM compliance as a blocker. Without SCORM, content migration from existing authoring tools was impossible — and every major competitor had it. The signal was strong enough across all four sources to quantify: multiple six-figure opportunities were stalled or lost against this single gap.</p>
+      <p>I compiled a business case — competitive analysis, cross-source signal volume, blocked pipeline estimate, and a phased rollout proposal — and presented to the product team. SCORM was prioritised within one quarter and shipped to beta, deployed first to the accounts that had flagged it directly.</p>
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-key">Method</div>
+          <div class="cs-stat-val">4-source aggregation — G2, Capterra, support tickets, CRM lost-deal notes</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Insight</div>
+          <div class="cs-stat-val">Single product gap identified as consistent signal across all four sources</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Business Case</div>
+          <div class="cs-stat-val">Competitive analysis + signal volume + blocked pipeline value</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Outcome</div>
+          <div class="cs-stat-val">Feature prioritised and shipped to beta in one quarter</div>
+        </div>
+      </div>
+      <div class="transfer-note">
+        <p><strong>Why this transfers to payments:</strong> The same signal aggregation method applies directly to competitive categories like merchant acquiring — where product gaps (missing payment methods, slow settlement, poor reconciliation UX) are often the real deal-killers that never surface in structured win/loss calls. The method, not the domain, is the skill.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 2: Pricing -->
+  <div class="case-study">
+    <div class="cs-meta">
+      <span class="cs-tag">Pricing Strategy · Revenue</span>
+      <span class="cs-year">2022–2023</span>
+    </div>
+    <div class="cs-headline">Pricing Architecture Through Cohort Testing and Customer Research</div>
+    <p class="cs-summary">How structured research, willingness-to-pay analysis, and cohort testing rebuilt a flat pricing model into a tiered architecture — delivering an 18% revenue lift over two quarters.</p>
+    <div class="cs-outcomes">
+      <span class="cs-outcome-pill">18% Revenue Lift</span>
+      <span class="cs-outcome-pill">Cohort Testing</span>
+      <span class="cs-outcome-pill">Enterprise Tier Design</span>
+      <span class="cs-outcome-pill">Willingness-to-Pay Research</span>
+    </div>
+    <button class="cs-toggle" onclick="toggleCS(this)">Read case study</button>
+    <div class="cs-detail">
+      <p>The original flat pricing had no feature caps — power users sat on entry-level plans with no natural reason to upgrade. I started with structured research: customer interviews to map real usage patterns, CRM usage data to find where customers were outgrowing their plans, and a competitor pricing teardown to understand where we were undercharging.</p>
+      <p>The output was a pricing architecture with three deliberate interventions. First, feature caps at key usage thresholds created clear value gaps between tiers. Second, a new mid-tier plan was designed and cohort-tested with existing customers before full rollout — their feedback directly shaped which caps to set and which features to hold back. Third, an enterprise-adjacent plan was designed with exclusive capabilities (SAML SSO, field-level encryption, advanced analytics) — used as a conversation tool in late-stage deals before public launch.</p>
+      <p>Revenue lifted 18% across two quarters post-rollout, driven by new conversions to mid-tier and upgrade pressure on existing power users who had outgrown the entry plan.</p>
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-key">Revenue Impact</div>
+          <div class="cs-stat-val">18% lift over 2 quarters post-rollout</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Method</div>
+          <div class="cs-stat-val">Cohort-tested with existing customers before full launch</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Enterprise Tier</div>
+          <div class="cs-stat-val">SSO, encryption, analytics — used in late-stage deal conversations</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Inputs</div>
+          <div class="cs-stat-val">Customer interviews + CRM usage signals + competitor pricing teardown</div>
+        </div>
+      </div>
+      <div class="transfer-note">
+        <p><strong>Why this transfers to payments:</strong> Pricing strategy in merchant acquiring — MDR structures, interchange-plus models, flat-rate vs. tiered plans, per-transaction fees — follows the same principles: segment willingness-to-pay, competitive anchoring, and feature-gating to drive upgrade behaviour. The mechanics are directly applicable.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 3: CI Tracker -->
+  <div class="case-study">
+    <div class="cs-meta">
+      <span class="cs-tag">Competitive Intelligence · AI</span>
+      <span class="cs-year">2023</span>
+    </div>
+    <div class="cs-headline">AI-Powered Competitive Intelligence Tracker</div>
+    <p class="cs-summary">A production-grade market intelligence system built using the Claude API — no vendor tool, no off-the-shelf solution. Surfaces deal-blocking competitive signals in real time.</p>
+    <div class="cs-outcomes">
+      <span class="cs-outcome-pill">Claude API</span>
+      <span class="cs-outcome-pill">Real-time Signal Monitoring</span>
+      <span class="cs-outcome-pill">Battlecard Automation</span>
+      <span class="cs-outcome-pill">Deal Velocity Recovery</span>
+    </div>
+    <button class="cs-toggle" onclick="toggleCS(this)">Read case study</button>
+    <div class="cs-detail">
+      <p>Competitor pages are monitored for changes via VisualPing and Distill.io, routed alongside Google Alerts and Feedly signals into a structured log. Claude analyses each signal, classifies it by theme and urgency, detects patterns across weeks, and surfaces actionable recommendations — keeping campaign messaging and positioning current without manual research cycles.</p>
+      <p>The system was built to solve a specific problem: sales reps were walking into enterprise deals with stale battlecards, and losing to objections we hadn't anticipated. By routing CI output directly into battlecard updates and sales talk tracks, the system eliminated the lag between a competitor's move and our field response.</p>
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-key">Input Sources</div>
+          <div class="cs-stat-val">VisualPing + Distill.io + Google Alerts + Feedly + G2 + Capterra</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Processing</div>
+          <div class="cs-stat-val">Claude API — classifies by theme, urgency, pattern over time</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Output</div>
+          <div class="cs-stat-val">Actionable recommendations → battlecards + positioning updates</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Business Impact</div>
+          <div class="cs-stat-val">Surfaced SCORM as enterprise blocker — restored multi-million-dollar deal velocity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CS 4: GTM Launch -->
+  <div class="case-study">
+    <div class="cs-meta">
+      <span class="cs-tag">GTM Strategy · Founding PMM</span>
+      <span class="cs-year">2020</span>
+    </div>
+    <div class="cs-headline">Building a Go-to-Market From Zero</div>
+    <p class="cs-summary">Founding launch strategy built with no brand equity, no ICP, and no historical data. 1,000+ signups in Year 1 driven entirely by Google Ads and SEO content.</p>
+    <div class="cs-outcomes">
+      <span class="cs-outcome-pill">1,000+ Signups Yr 1</span>
+      <span class="cs-outcome-pill">ICP Research from Zero</span>
+      <span class="cs-outcome-pill">Channel Strategy</span>
+      <span class="cs-outcome-pill">Pain-to-Message Mapping</span>
+    </div>
+    <button class="cs-toggle" onclick="toggleCS(this)">Read case study</button>
+    <div class="cs-detail">
+      <p>Joined with no GTM function, no ICP, no positioning, no historical data, and no brand equity. Built the entire go-to-market from scratch — ICP research through competitor teardowns and user interviews, pain-to-message mapping, landing page copy, and a two-channel acquisition engine.</p>
+      <p>Phase 1 ICP was built entirely from external research: competitor analysis (Kajabi, Teachable messaging revealed underserved segments), G2/Capterra review mining for recurring pain, Reddit community monitoring for unfiltered frustration, and 1:1 interviews to validate.</p>
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-key">Launch channel 1</div>
+          <div class="cs-stat-val">Google Ads — RSA copy across 6 keyword themes, competitor displacement</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Launch channel 2</div>
+          <div class="cs-stat-val">SEO — comparison and alternative-to pages, mid-funnel interception</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Freemium</div>
+          <div class="cs-stat-val">Zero-friction entry — no credit card, natural upgrade path</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-key">Outcome</div>
+          <div class="cs-stat-val">1,000+ signups in Year 1 with zero pre-existing brand equity</div>
+        </div>
+      </div>
+      <p>Core message: <em>"Run your entire course business from one place."</em> Pain-to-message map covered: tool fragmentation, transaction fee anxiety, tech overwhelm, and pricing mismatch — each mapped to a distinct value bucket with clear message framing.</p>
+    </div>
+  </div>
+
+  <!-- CS 5: ICP Evolution -->
+  <div class="case-study">
+    <div class="cs-meta">
+      <span class="cs-tag">ICP Research · Buyer Strategy</span>
+      <span class="cs-year">2020–2022</span>
+    </div>
+    <div class="cs-headline">ICP Evolution — Solo Creator to Enterprise L&amp;D</div>
+    <p class="cs-summary">Two-phase ICP build: Phase 1 built from competitor gaps and interviews with zero internal data. Phase 2 data-confirmed via CRM segmentation for enterprise verticals.</p>
+    <div class="cs-outcomes">
+      <span class="cs-outcome-pill">Competitive Research</span>
+      <span class="cs-outcome-pill">Vertical Segmentation</span>
+      <span class="cs-outcome-pill">20% Enterprise Win Rate Lift</span>
+      <span class="cs-outcome-pill">Segment-specific Enablement</span>
+    </div>
+    <button class="cs-toggle" onclick="toggleCS(this)">Read case study</button>
+    <div class="cs-detail">
+      <p>Phase 1 ICP was researcher-defined — built entirely from competitor gaps and direct user conversations, with no internal data to rely on. Phase 2 ICP was data-confirmed — CRM signals validated which verticals converted best, enabling sharper persona work and vertical-specific battlecards.</p>
+      <table class="cs-table">
+        <thead>
+          <tr><th>Vertical</th><th>Primary Buyer</th><th>Key Need</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Corporate L&amp;D</td><td>L&amp;D Manager / CHRO</td><td>Compliance tracking, SCORM, team reporting</td></tr>
+          <tr><td>Training Institutes</td><td>Director / Owner</td><td>Multi-trainer licenses, white-label, custom domain</td></tr>
+          <tr><td>Hospitality</td><td>HR Head</td><td>Low-bandwidth, 17 languages, mobile app</td></tr>
+          <tr><td>Legal &amp; Professional</td><td>Admin / Partner</td><td>Certifications, audit trails, field-level encryption</td></tr>
+          <tr><td>Non-profits / NGOs</td><td>Program Manager</td><td>Affordable pricing, regional language access</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<!-- WORK SAMPLES -->
+<section id="work">
+  <div class="section-label">Work Samples</div>
+
+  <div class="work-grid">
+
+    <!-- A/B Test -->
+    <div class="work-card">
+      <div class="work-card-tag">A/B Test · Homepage</div>
+      <h3>Homepage Headline &amp; Pricing Visibility</h3>
+      <p>Tested headline copy and pricing visibility over 3 weeks, 5,200 visitors. 12% more signups when pricing was removed from the page.</p>
+      <button class="cs-toggle" onclick="toggleWork(this)" style="font-size:13px;">See details</button>
+      <div class="work-card-detail">
+        <div class="ab-compare">
+          <div class="ab-col">
+            <div class="ab-col-label">Control</div>
+            <div class="ab-col-val">3.8%</div>
+            <div class="ab-col-desc">"Online Course Creation Platform" + pricing visible</div>
+          </div>
+          <div class="ab-col winner">
+            <div class="ab-col-label">Variant ✓</div>
+            <div class="ab-col-val">4.3%</div>
+            <div class="ab-col-desc">"Online Training Platform" + pricing removed</div>
+          </div>
+        </div>
+        <p style="font-size:13px; color:var(--mid); margin-top:0.75rem;">The test validated a repositioning hypothesis, not just a copy preference — justifying the broader messaging shift from "course platform" to "training platform" across ads, email, and sales collateral. Pricing moved to a dedicated /pricing page.</p>
+        <p style="font-size:12px; color:var(--faint); margin-top:0.5rem;">3-week test · ~5,200 visitors · 95% confidence · 50/50 split</p>
+      </div>
+    </div>
+
+    <!-- ICP Research -->
+    <div class="work-card">
+      <div class="work-card-tag">Buyer Research · ICP</div>
+      <h3>Phase 1 ICP — Built from Zero Data</h3>
+      <p>Competitor teardowns, G2/Reddit mining, and 1:1 interviews used to build the first ICP with no CRM history and no conversion data available.</p>
+      <button class="cs-toggle" onclick="toggleWork(this)" style="font-size:13px;">See details</button>
+      <div class="work-card-detail">
+        <table class="cs-table">
+          <thead><tr><th>Pain</th><th>Message</th></tr></thead>
+          <tbody>
+            <tr><td>Juggling 4–5 tools</td><td>Everything in one place. No integrations.</td></tr>
+            <tr><td>7.5% transaction fees</td><td>Zero commission. Keep every rupee.</td></tr>
+            <tr><td>Tech overwhelm</td><td>Launch a course in an hour. No IT needed.</td></tr>
+            <tr><td>Enterprise pricing</td><td>Flat pricing with a free tier. No risk.</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px; color:var(--faint); margin-top:0.75rem;">Research sources: Kajabi/Teachable teardown · G2/Capterra/Trustpilot · Reddit + Facebook groups · Direct user interviews</p>
+      </div>
+    </div>
+
+    <!-- GTM Launch -->
+    <div class="work-card">
+      <div class="work-card-tag">GTM · Launch Sequencing</div>
+      <h3>0→1 Launch Playbook</h3>
+      <p>Pre-launch → launch → post-launch sequencing with two owned channels. 1,000+ signups in Year 1 with zero prior brand equity.</p>
+      <button class="cs-toggle" onclick="toggleWork(this)" style="font-size:13px;">See details</button>
+      <div class="work-card-detail">
+        <p style="font-size:13px; color:var(--mid);">Pre-launch: ICP research, competitor teardown, messaging framework, landing page copy.<br><br>Launch (Q4 2020): Google Ads live (RSA copy, 6 keyword themes, competitor displacement). SEO content live (comparison + alternative-to pages for mid-funnel). Freemium tier activated — no credit card barrier.<br><br>Post-launch: Funnel analysis, battlecard creation, keyword expansion, messaging iteration based on conversion data.</p>
+        <p style="font-size:12px; color:var(--faint); margin-top:0.5rem;">Outcome: 1,000+ signups · 2 channels · 0 pre-existing brand equity</p>
+      </div>
+    </div>
+
+    <!-- PR & Thought Leadership -->
+    <div class="work-card">
+      <div class="work-card-tag">PR · Thought Leadership</div>
+      <h3>PR Strategy &amp; Content Engine</h3>
+      <p>Media pitches, press narratives, whitepapers, webinar programmes, and long-form articles — driving 43% of inbound traffic and establishing category authority.</p>
+      <button class="cs-toggle" onclick="toggleWork(this)" style="font-size:13px;">See details</button>
+      <div class="work-card-detail">
+        <p style="font-size:13px; color:var(--mid);">Built and ran end-to-end PR campaigns: media pitches, PR decks, and press narratives that secured coverage reinforcing TrainerCentral's positioning in the online training and L&D space.<br><br>Content engine: whitepapers, long-form SEO articles, webinar scripts, and case studies calibrated to awareness, consideration, and expansion stages for distinct buyer personas.<br><br>43% of inbound pipeline driven by content and organic channels. 12% lead conversion rate from content-sourced traffic.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BEYOND THE DECK -->
+<section id="beyond" style="padding-top: 0;">
+  <div class="section-label">Beyond the Deck</div>
+  <div class="beyond-card">
+    <div class="beyond-header">
+      <div class="beyond-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="beyond-header-text">
+        <h3>Building Automation for a Real Business Client</h3>
+        <p>n8n · WhatsApp Cloud API · Google Sheets · Apps Script · Cloudflare Pages</p>
+      </div>
+    </div>
+    <div class="beyond-body">
+      <p>After leaving Zoho in May 2026, I've been consulting on automation for an SME client — staying hands-on while searching for the right senior PMM role. The client is South India Pipe Agency, a B2B distribution business in Madurai. The work isn't a pivot to engineering — it's how I stay close to the real operational problems that product marketers in payments and B2B SaaS need to understand from the inside.</p>
+      <p>The project: a full CRM PWA with WhatsApp automation, JustDial lead capture, payment nudges, and pipeline tracking — replacing a fragmented mix of spreadsheets, WhatsApp threads, and manual follow-ups. Built with a Google Sheets backend, Apps Script API layer, 14 n8n workflows, and Cloudflare Pages hosting.</p>
+      <div class="workflow-pills">
+        <span class="workflow-pill">Lead capture (JustDial + walk-in)</span>
+        <span class="workflow-pill">WhatsApp follow-up automation</span>
+        <span class="workflow-pill">Pipeline status tracking</span>
+        <span class="workflow-pill">Payment nudge workflows</span>
+        <span class="workflow-pill">Referrer tracking</span>
+        <span class="workflow-pill">Customer onboarding</span>
+      </div>
+      <div class="beyond-insight">
+        <p>Sitting on the merchant side of payments and ops — watching a real business owner deal with fragmented tools, manual reconciliation, and missed follow-ups — is exactly the empathy that makes a payments PMM's messaging land. I've lived the problem Revolut's merchant acquiring product is trying to solve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div>
+        <div class="exp-co">Zoho Corporation</div>
+        <div class="exp-role">Senior Product Marketer — TrainerCentral</div>
+      </div>
+      <div class="exp-dates">Nov 2020 – May 2026 · Chennai</div>
+    </div>
+    <p class="exp-body">Founding PMM. Built the entire GTM function from zero — ICP, positioning, value proposition, channel strategy, PR, pricing, sales enablement, and competitive intelligence — across India, the U.S., and Singapore. Led a 4-person PMM team. Drove 18% revenue lift through pricing architecture, 45% MQL→SQL improvement, 20% enterprise win rate lift, and paid churn from 11% to 5%.</p>
+    <div class="exp-tags">
+      <span class="exp-tag">Value Proposition</span>
+      <span class="exp-tag">GTM Strategy</span>
+      <span class="exp-tag">PR &amp; Thought Leadership</span>
+      <span class="exp-tag">Competitive Intelligence</span>
+      <span class="exp-tag">Pricing Strategy</span>
+      <span class="exp-tag">Global Scaling</span>
+      <span class="exp-tag">Team Leadership</span>
+      <span class="exp-tag">Product Adoption</span>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div>
+        <div class="exp-co">Independent Consultant</div>
+        <div class="exp-role">Freelance — Automation &amp; Sales Operations</div>
+      </div>
+      <div class="exp-dates">May 2026 – Present</div>
+    </div>
+    <p class="exp-body">Consulting on sales and payment operations automation for an SME client (South India Pipe Agency, Madurai) — building workflows across n8n, WhatsApp Cloud API, and Google Sheets while actively seeking a senior PMM role in B2B fintech and payments. First-hand exposure to the operational fragmentation that payment and workflow tools create for business owners.</p>
+    <div class="exp-tags">
+      <span class="exp-tag">n8n Automation</span>
+      <span class="exp-tag">SME Operations</span>
+      <span class="exp-tag">WhatsApp API</span>
+      <span class="exp-tag">Payment Workflows</span>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div>
+        <div class="exp-co">Freelance</div>
+        <div class="exp-role">Content Marketer — B2B SaaS</div>
+      </div>
+      <div class="exp-dates">Jun – Nov 2020</div>
+    </div>
+    <p class="exp-body">SEO strategy, brand messaging, and growth positioning for early-stage B2B SaaS startups — 2–3× organic traffic growth and 15–25% conversion rate improvements. Brand messaging and PR strategy for esports teams.</p>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <div>
+        <div class="exp-co">TATA Projects</div>
+        <div class="exp-role">Deputy Manager</div>
+      </div>
+      <div class="exp-dates">Jun 2019 – Oct 2020</div>
+    </div>
+    <p class="exp-body">Project scheduling, budget forecasting, and cross-functional reporting for large-scale infrastructure projects. Built the analytical rigour and stakeholder communication discipline central to PMM operations work today.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">Skills &amp; Expertise</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-label">Fintech &amp; Payments Ecosystem</div>
+      <div class="skill-items">
+        <span class="skill-item">Merchant Acquiring</span>
+        <span class="skill-item">Payment Infrastructure</span>
+        <span class="skill-item">MDR &amp; Fee Structures</span>
+        <span class="skill-item">Stripe / Adyen / SumUp</span>
+        <span class="skill-item">Fintech GTM</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Product Marketing Core</div>
+      <div class="skill-items">
+        <span class="skill-item">Value Proposition Development</span>
+        <span class="skill-item">GTM Strategy</span>
+        <span class="skill-item">ICP Definition</span>
+        <span class="skill-item">Competitive Intelligence</span>
+        <span class="skill-item">VoC Research</span>
+        <span class="skill-item">Roadmap Influence</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Channels &amp; Campaigns</div>
+      <div class="skill-items">
+        <span class="skill-item">Performance Marketing</span>
+        <span class="skill-item">SEO / AEO / GEO</span>
+        <span class="skill-item">PR &amp; Media Strategy</span>
+        <span class="skill-item">In-Product Campaigns</span>
+        <span class="skill-item">Email &amp; Lifecycle</span>
+        <span class="skill-item">A/B Testing</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Analytics &amp; AI</div>
+      <div class="skill-items">
+        <span class="skill-item">Product Adoption Monitoring</span>
+        <span class="skill-item">Funnel Analytics</span>
+        <span class="skill-item">Claude API</span>
+        <span class="skill-item">AI Workflow Design</span>
+        <span class="skill-item">GA4</span>
+        <span class="skill-item">Zoho Analytics</span>
+        <span class="skill-item">n8n</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Sakthi Ramkumar S &nbsp;·&nbsp; <a href="mailto:ramkr_31@outlook.com">ramkr_31@outlook.com</a> &nbsp;·&nbsp; <a href="https://linkedin.com/in/sakthiramkumar" target="_blank">LinkedIn</a></p>
+</footer>
+
+<script>
+  function toggleCS(btn) {
+    const detail = btn.nextElementSibling;
+    const isOpen = detail.classList.contains('visible');
+    detail.classList.toggle('visible', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'Read case study' : 'Close';
+    if (!isOpen) btn.classList.add('open');
+    else btn.classList.remove('open');
+  }
+
+  function toggleWork(btn) {
+    const detail = btn.nextElementSibling;
+    const isOpen = detail.classList.contains('visible');
+    detail.classList.toggle('visible', !isOpen);
+    btn.textContent = isOpen ? 'See details' : 'Close';
+    if (!isOpen) btn.classList.add('open');
+    else btn.classList.remove('open');
+  }
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
